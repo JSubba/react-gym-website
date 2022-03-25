@@ -1,0 +1,73 @@
+@import "../variables.scss";
+@import "../index.scss";
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: transparent;
+  transition: 0.6s ease-in-out;
+
+  .active {
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.157);
+    background-color: $black;
+  }
+
+  .logo img {
+    width: 90px;
+  }
+
+  .menu {
+    display: flex;
+
+    li {
+      a {
+        font-family: "Lato";
+        height: 40px;
+        line-height: 43px;
+        margin: 3px;
+        padding: 0px 22px;
+        display: flex;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $white;
+        letter-spacing: 1px;
+        border-radius: 3px;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          background-color: $red;
+          color: $white;
+          box-shadow: 5px 10px 30px rgba(255, 2, 2, 0.336);
+          transition: all ease 0.2s;
+          @include flash;
+        }
+      }
+    }
+  }
+
+  .menu-btn,
+  .menu-icon {
+    display: none;
+  }
+}
+
+.active {
+  background-color: $red;
+  color: $white;
+  box-shadow: 5px 10px 30px rgba(198, 64, 64, 0.411);
+  transition: all ease 0.2s;
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+    box-shadow: 5px 10px 30px rgba(198, 64, 64, 0.411);
+    transition: all ease 0.2s;
+  }
+}

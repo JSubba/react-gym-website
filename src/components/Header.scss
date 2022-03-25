@@ -1,0 +1,100 @@
+@import "../variables.scss";
+@import "../index.scss";
+
+#main {
+  width: 100%;
+  height: 100vh;
+  // height: 768px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../assets/images/banner.png");
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background: -moz-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(181, 8, 8, 0.38) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    background: -webkit-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(181, 8, 8, 0.38) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    background: radial-gradient(
+      ellipse at center,
+      rgba(181, 8, 8, 0.38) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61b50808', endColorstr='#99000000',GradientType=1 );
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .name {
+    text-align: center;
+    width: 900px;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -55%);
+
+    h2 {
+      font-family: "Montserrat";
+      font-size: 2.7rem;
+      margin: 0px;
+      letter-spacing: 2px;
+      color: $white;
+    }
+
+    h1 {
+      font-family: "Montserrat";
+      font-size: 5rem;
+      margin: 0px;
+      letter-spacing: 2px;
+      color: $white;
+
+      span {
+        color: $red;
+      }
+    }
+
+    .details {
+      font-family: "Montserrat";
+      font-size: 23px;
+      color: $shade;
+    }
+  }
+
+  .header-btns {
+    display: flex;
+    margin-top: 40px;
+    margin-left: 40%;
+
+    .header-btn {
+      width: 160px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.4rem;
+      background-color: $red;
+      box-shadow: 5px 10px 30px rgba(255, 2, 2, 0.336);
+      border-radius: 5px;
+      color: $white;
+    }
+
+    .header-btn:hover {
+      @include flash;
+    }
+  }
+}

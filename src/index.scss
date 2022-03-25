@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import "./variables.scss";
+
+@mixin flash {
+  animation: flash;
+  animation-duration: 1s;
+}
+
+@mixin pulse {
+  animation: pulse;
+  animation-duration: 2s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: $black;
+  text-align: center;
+  // width: 100%;
+  // height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn,
+button,
+input {
+  outline: none;
+  border: none;
+}
