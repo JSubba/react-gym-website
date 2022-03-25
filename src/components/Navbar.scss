@@ -1,5 +1,4 @@
 @import "../variables.scss";
-@import "../index.scss";
 
 nav {
   display: flex;
@@ -27,26 +26,23 @@ nav {
 
     li {
       a {
-        font-family: "Lato";
-        height: 40px;
-        line-height: 43px;
-        margin: 3px;
+        height: 80px;
+        line-height: 80px;
         padding: 0px 22px;
         display: flex;
-        font-size: 0.9rem;
+        font-size: 1rem;
         text-transform: uppercase;
         font-weight: 500;
         color: $white;
         letter-spacing: 1px;
-        border-radius: 3px;
         transition: 0.2s ease-in-out;
 
         &:hover {
           background-color: $red;
           color: $white;
           box-shadow: 5px 10px 30px rgba(255, 2, 2, 0.336);
-          transition: all ease 0.2s;
-          @include flash;
+          animation: flash;
+          animation-duration: 1s;
         }
       }
     }

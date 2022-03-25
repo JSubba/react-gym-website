@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import "./Header.scss";
 
 const Header = () => {
@@ -14,9 +15,14 @@ const Header = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
           <div className="header-btns">
-            <a href="#" className="header-btn">
+            <Link
+              to="contact"
+              className="header-btn"
+              smooth={true}
+              duration={1000}
+            >
               JOIN US
-            </a>
+            </Link>
           </div>
         </div>
       </div>

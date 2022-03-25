@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className={nav ? "nav active" : "nav"}>
-      <Link to="#" className="logo">
+      <Link to="main" className="logo" smooth={true} duration={2000}>
         <img src={Logo} alt="logo image" />
       </Link>
       <input type="checkbox" id="menu-btn" className="menu-btn" />
@@ -22,19 +22,29 @@ const Navbar = () => {
       </label>
       <ul className="menu">
         <li>
-          <Link to="#">HEADER</Link>
+          <Link to="main" smooth={true} duration={1000}>
+            HEADER
+          </Link>
         </li>
         <li>
-          <Link to="#">ABOUT</Link>
+          <Link to="features" smooth={true} duration={1000}>
+            FEATURES
+          </Link>
         </li>
         <li>
-          <Link to="#">FEATURES</Link>
+          <Link to="offer" smooth={true} duration={1000}>
+            OFFER
+          </Link>
         </li>
         <li>
-          <Link to="#">OFFER</Link>
+          <Link to="about" smooth={true} duration={1000}>
+            ABOUT
+          </Link>
         </li>
         <li>
-          <Link to="#">CONTACT</Link>
+          <Link to="contact" smooth={true} duration={1000}>
+            CONTACT
+          </Link>
         </li>
       </ul>
     </nav>

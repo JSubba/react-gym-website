@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-scroll";
+import "./About.scss";
 import aboutImage from "../assets/images/about.png";
 
 const About = () => {
@@ -14,7 +16,11 @@ const About = () => {
           explicabo ipsum a modi dolorum ipsam, similique ratione earum,
           asperiores provident placeat consectetur totam quis quo.
         </p>
-        <button>READ MORE</button>
+        <button>
+          <Link to="main" smooth={true} duration={1000}>
+            READ MORE
+          </Link>
+        </button>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import "./Offer.scss";
 
 const Offer = () => {
@@ -12,9 +13,9 @@ const Offer = () => {
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         </p>
         <div className="offer-btns">
-          <a href="#" className="offer-btn">
+          <Link to="main" className="offer-btn" smooth={true} duration={1000}>
             JOIN NOW
-          </a>
+          </Link>
         </div>
       </div>
     </div>

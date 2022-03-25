@@ -1,8 +1,9 @@
-import About from "./components/About";
 import Feature from "./components/Feature";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Offer from "./components/Offer";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Feature />
       <Offer />
       <About />
+      <Contact />
     </div>
   );
 }
