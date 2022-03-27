@@ -1,26 +1,34 @@
 import React, { useState } from "react";
 import Logo from "../assets/images/logo.png";
 import { Link } from "react-scroll";
+import { GiHamburgerMenu } from "react-icons/gi";
+// import { FaTimes } from "react-icons/fa";
 import "./Navbar.scss";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [displayNav, setDisplayNav] = useState(false);
 
   const changeBackground = () => {
     window.scrollY > 50 ? setNav(true) : setNav(false);
   };
   window.addEventListener("scroll", changeBackground);
 
+  const handleDisplay = () => {
+    setDisplayNav(!displayNav);
+  };
+
   return (
     <nav className={nav ? "nav active" : "nav"}>
       <Link to="main" className="logo" smooth={true} duration={2000}>
         <img src={Logo} alt="logo image" />
       </Link>
-      <input type="checkbox" id="menu-btn" className="menu-btn" />
       <label className="menu-icon" for="menu-btn">
-        <span className="nav-icon"></span>
+        <span className="nav-icon" onClick={handleDisplay}>
+          <GiHamburgerMenu />
+        </span>
       </label>
-      <ul className="menu">
+      <ul className={displayNav ? "menu menu-active" : "menu"}>
         <li>
           <Link to="main" smooth={true} duration={1000}>
             HEADER
@@ -39,6 +47,11 @@ const Navbar = () => {
         <li>
           <Link to="about" smooth={true} duration={1000}>
             ABOUT
+          </Link>
+        </li>
+        <li>
+          <Link to="reviews" smooth={true} duration={1000}>
+            REVIEWS
           </Link>
         </li>
         <li>

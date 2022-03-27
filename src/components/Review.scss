@@ -1,0 +1,54 @@
+@import "../variables.scss";
+
+#reviews {
+  background: $white;
+
+  h1 {
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    color: $black;
+    padding-top: 4.5rem;
+  }
+
+  .container {
+    .row {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 2rem 0 5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      div {
+        padding: 1rem 0.5rem;
+        border-radius: 8px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+        @media (max-width: $large-screen) {
+          margin: 1.2rem 0.5rem;
+        }
+
+        &:hover {
+          animation: pulse;
+          animation-duration: 2s;
+        }
+      }
+
+      img {
+        border-radius: 50%;
+        padding-bottom: 1rem;
+      }
+
+      p {
+        max-width: 300px;
+        margin: 0.8rem auto;
+        line-height: 1.3;
+      }
+
+      .stars {
+        color: $red-dark;
+      }
+    }
+  }
+}

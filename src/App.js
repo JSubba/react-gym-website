@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Offer from "./components/Offer";
 import About from "./components/About";
+import Review from "./components/Review";
 import Contact from "./components/Contact";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Feature />
       <Offer />
       <About />
+      <Review />
       <Contact />
     </div>
   );

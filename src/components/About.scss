@@ -1,7 +1,7 @@
 @import "../variables.scss";
 
 #about {
-  margin: 2rem auto;
+  margin: 2rem auto 5rem;
   width: 100%;
   max-width: 1200px;
   display: flex;
@@ -14,6 +14,10 @@
     flex-basis: 50%;
     margin: 0 auto;
 
+    @media (max-width: $large-screen) {
+      flex-basis: 100%;
+    }
+
     img {
       width: 400px;
     }
@@ -25,11 +29,13 @@
 
     @media (max-width: $large-screen) {
       flex-basis: 100%;
+      padding-top: 2rem;
     }
 
     h1 {
       font-size: 3rem;
-      color: $red;
+      color: $shade;
+      line-height: 1.5;
       font-weight: 500;
       margin: 0px;
       padding: 0px;
@@ -51,7 +57,7 @@
       border: none;
       outline: none;
       color: $white;
-      background-color: $red;
+      background-color: $red-dark;
 
       &:hover {
         box-shadow: 5px 10px 30px rgba(255, 2, 2, 0.336);
