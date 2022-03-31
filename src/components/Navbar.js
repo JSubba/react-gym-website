@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../assets/images/logo.png";
 import { Link } from "react-scroll";
-import { GiHamburgerMenu } from "react-icons/gi";
-// import { FaTimes } from "react-icons/fa";
+import { FaTimes, FaBars } from "react-icons/fa";
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -23,9 +22,9 @@ const Navbar = () => {
       <Link to="main" className="logo" smooth={true} duration={2000}>
         <img src={Logo} alt="logo image" />
       </Link>
-      <label className="menu-icon" for="menu-btn">
+      <label className="menu-icon">
         <span className="nav-icon" onClick={handleDisplay}>
-          <GiHamburgerMenu />
+          {displayNav ? <FaTimes /> : <FaBars />}
         </span>
       </label>
       <ul className={displayNav ? "menu menu-active" : "menu"}>

@@ -2,28 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import "./variables.scss";
 
-@mixin flash {
-  animation: flash;
-  animation-duration: 1s;
-}
-
-@mixin pulse {
-  animation: pulse;
-  animation-duration: 2s;
-}
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+html,
 body {
   font-family: "Lato", sans-serif;
   background-color: $black;
   text-align: center;
-  width: 100%;
-  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,9 +29,27 @@ a {
   text-decoration: none;
 }
 
-.btn,
 button,
 input {
   outline: none;
   border: none;
+}
+
+button {
+  margin-top: 2rem;
+  width: 140px;
+  height: 45px;
+  border-radius: 5px;
+  font-weight: 700;
+  color: $white;
+  background-color: $red-dark;
+
+  &:hover {
+    box-shadow: 5px 10px 30px rgba(255, 2, 2, 0.336);
+    background-color: #000;
+    transition: all ease 0.3s;
+    color: $white;
+    animation: flash;
+    animation-duration: 1s;
+  }
 }

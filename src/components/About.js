@@ -10,7 +10,7 @@ const About = () => {
         <img src={aboutImage} alt="about image" />
       </div>
       <div className="about-text">
-        <h1>MORE ABOUT US</h1>
+        <h1>SHONAN GYM</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
           explicabo ipsum a modi dolorum ipsam, similique ratione earum,
@@ -18,7 +18,7 @@ const About = () => {
         </p>
         <button>
           <Link to="main" smooth={true} duration={1000}>
-            READ MORE
+            LEARN MORE
           </Link>
         </button>
       </div>

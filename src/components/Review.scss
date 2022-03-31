@@ -16,7 +16,7 @@
       justify-content: space-around;
       align-items: center;
       flex-wrap: wrap;
-      padding: 2rem 0 5rem;
+      padding: 2rem 0;
       max-width: 1200px;
       margin: 0 auto;
 
@@ -49,6 +49,10 @@
       .stars {
         color: $red-dark;
       }
+    }
+
+    button {
+      margin: 0.5rem auto 4rem;
     }
   }
 }

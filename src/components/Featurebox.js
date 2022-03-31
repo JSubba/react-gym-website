@@ -2,11 +2,11 @@ import React from "react";
 
 const Featurebox = ({ image, title }) => {
   return (
-    <div className="a-box">
-      <di>
+    <div className="box">
+      <div>
         <img src={image} alt="feature image" />
-      </di>
-      <div className="a-b-text">
+      </div>
+      <div className="text">
         <h2>{title}</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </div>

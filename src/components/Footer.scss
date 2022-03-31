@@ -1,0 +1,65 @@
+@import "../variables.scss";
+
+.footer {
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(190, 4, 4, 1));
+  padding: 2em 5em 0;
+
+  .footer-container {
+    @include flex;
+    color: $white;
+    max-width: $extraLarge-screen;
+    margin: 0 auto;
+
+    .footer-logo img {
+      width: 3em;
+      margin: 1em 0 0;
+    }
+
+    h2 {
+      padding: 0.5em 0 1em;
+
+      a {
+        color: $white;
+        margin: 0.5em;
+
+        .footer-icon:hover {
+          transform: scale(1.1);
+          transition: 0.5s ease;
+          color: $red;
+        }
+      }
+    }
+
+    .footer-link-box {
+      @include flex;
+
+      .footer-list {
+        padding: 0 3em;
+
+        @media (max-width: $medium-screen) {
+          margin-bottom: 1em;
+        }
+
+        li a {
+          color: $white;
+          line-height: 1.8;
+          cursor: pointer;
+
+          &:hover {
+            @include flash;
+            color: $shade;
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    color: $shade;
+    text-align: center;
+    font-size: 0.8em;
+    opacity: 0.7;
+    margin-top: 2em;
+  }
+}

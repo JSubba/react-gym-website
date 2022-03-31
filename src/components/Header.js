@@ -9,7 +9,8 @@ const Header = () => {
         <div className="name">
           <h2>START YOUR</h2>
           <h1>
-            <span>FITNESS</span>WITH US.
+            <span>FITNESS</span>
+            <br /> WITH US.
           </h1>
           <p className="details">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.

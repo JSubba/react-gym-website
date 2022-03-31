@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import "./Review.scss";
 import Person1 from "../assets/images/person1.png";
 import Person2 from "../assets/images/person2.png";
@@ -60,6 +61,11 @@ const Review = () => {
             </h3>
           </div>
         </div>
+        <button>
+          <Link to="main" smooth={true} duration={1000}>
+            READ MORE
+          </Link>
+        </button>
       </div>
     </div>
   );
